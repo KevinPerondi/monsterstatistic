@@ -1,5 +1,10 @@
 #!/bin/bash
 echo off
+
+#start api
+python apizinha.py 
+
+#crawling data...
 while true
 do
 	rm otp
