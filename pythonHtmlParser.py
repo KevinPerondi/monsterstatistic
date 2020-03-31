@@ -3,6 +3,7 @@
 from pathlib import Path
 import re
 import psycopg2
+import json
 
 def RetornaListaMobs(mobFile):
 	mobs = []
@@ -29,9 +30,9 @@ def RetornaEncontrados(mobsList, htmlPath):
 					dicionarioDosMortosOntem.append(mob)
 	return dicionarioDosMortosOntem
 
-def GetDatabaseConnection():
+def GetDatabaseConnection(configJson):
 	try:
-		conn = psycopg2.connect("dbname='' user='' host='' password=''")
+		conn = psycopg2.connect("dbname='"+configJson["database"]+"' user='"+configJson["user"]+"' host='"+configJson["host"]+"' password='"+configJson["passwd"]+"'")
 		return conn
 	except Exception as e:
 		print("Connection database failed.")
@@ -53,12 +54,21 @@ def saveOnDatabase(cursor, mobList):
 			print('Error on saving result. [Method: saveOnDatabase]')
 			print(str(e))
 
+def ReadConfig():
+	p = Path(str(Path().absolute())+"/config.json")
+	if p.exists():
+		with open(str(p.resolve())) as fr:
+			return json.load(fr)
+	else:
+		return None
+
 if __name__ == "__main__":
 	mobsPath = str(Path().absolute())+"/mobs.txt"
 	htmlPath = str(Path().absolute())+"/otp"
+	dbConfigs = ReadConfig()
 	mobs = RetornaListaMobs(mobsPath)
 	deramOntem = RetornaEncontrados(mobs,htmlPath)
-	dbConnection = GetDatabaseConnection()
+	dbConnection = GetDatabaseConnection(dbConfigs)
 	cursorDB = dbConnection.cursor()
 	saveOnDatabase(cursorDB,deramOntem)
 	dbConnection.commit()
