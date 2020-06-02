@@ -7,9 +7,9 @@ Elvira Hammerthrust
 Robby the Reckless
 Jesse the Wicked
 Man In The Cave
-Yeti
+Yetis
 The Pale Count
-Midnight Panther
+Midnight Panthers
 White Pale
 Ocyakao
 Ferumbras
@@ -18,7 +18,7 @@ Zushuka
 Furyosa
 Chizzoron the Distorter
 Cublarc the Plunderer
-Dire Penguin
+Dire Penguins
 Dharalion
 Gaz'Haragoth
 Dracola
@@ -28,7 +28,7 @@ Mr. Punish
 Morgaroth
 Omrafir
 Orshabaal
-Rotworm Queen
+Rotworm Queens
 The Handmaiden
 The Evil Eye
 The Imperor
@@ -38,3 +38,6 @@ Tyrn
 Zulazza the Corruptor
 Massacre
 Countess Sorrow
+Captain Jones
+Shlorg
+Weakened Shlorg

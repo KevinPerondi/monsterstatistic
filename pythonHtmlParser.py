@@ -68,6 +68,7 @@ if __name__ == "__main__":
 	dbConfigs = ReadConfig()
 	mobs = RetornaListaMobs(mobsPath)
 	deramOntem = RetornaEncontrados(mobs,htmlPath)
+	print deramOntem
 	dbConnection = GetDatabaseConnection(dbConfigs)
 	cursorDB = dbConnection.cursor()
 	saveOnDatabase(cursorDB,deramOntem)

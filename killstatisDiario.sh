@@ -2,7 +2,7 @@
 echo off
 
 #start api
-python apizinha.py 
+#python apizinha.py 
 
 #crawling data...
 while true
