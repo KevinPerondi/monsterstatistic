@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagBoss.Domain\PagBoss.Domain.csproj" />
+    <ProjectReference Include="..\PagBoss.Infra\PagBoss.Infra.csproj" />
+    <ProjectReference Include="..\PagBoss.Shared\PagBoss.Shared.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>

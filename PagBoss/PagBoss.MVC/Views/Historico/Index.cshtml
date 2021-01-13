@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Belobra Bosses";
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Boss</th>
+                <th scope="col">Morto em</th>
+                <th scope="col">Previsão</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bossData in ViewBag.Dados)
+            {
+                <tr>
+                    <td>@bossData.BossName</td>
+                    <td>@bossData.LastApparition.ToString("dd/MM/yyyy")</td>
+                    <td>@bossData.FrequencyIntervalDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

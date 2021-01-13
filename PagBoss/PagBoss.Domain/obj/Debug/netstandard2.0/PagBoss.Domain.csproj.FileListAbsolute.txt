@@ -1,0 +1,12 @@
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/bin/Debug/netstandard2.0/PagBoss.Domain.deps.json
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/bin/Debug/netstandard2.0/PagBoss.Domain.dll
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/bin/Debug/netstandard2.0/PagBoss.Domain.pdb
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/bin/Debug/netstandard2.0/PagBoss.Shared.dll
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/bin/Debug/netstandard2.0/PagBoss.Shared.pdb
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/Debug/netstandard2.0/PagBoss.Domain.csprojAssemblyReference.cache
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/Debug/netstandard2.0/PagBoss.Domain.AssemblyInfoInputs.cache
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/Debug/netstandard2.0/PagBoss.Domain.AssemblyInfo.cs
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/Debug/netstandard2.0/PagBoss.Domain.csproj.CoreCompileInputs.cache
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/Debug/netstandard2.0/PagBoss.Domain.csproj.CopyComplete
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/Debug/netstandard2.0/PagBoss.Domain.dll
+/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/Debug/netstandard2.0/PagBoss.Domain.pdb

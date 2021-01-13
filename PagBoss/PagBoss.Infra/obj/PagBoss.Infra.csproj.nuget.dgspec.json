@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Infra/PagBoss.Infra.csproj": {}
+  },
+  "projects": {
+    "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/PagBoss.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/PagBoss.Domain.csproj",
+        "projectName": "PagBoss.Domain",
+        "projectPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/PagBoss.Domain.csproj",
+        "packagesPath": "/home/kevin/.nuget/packages/",
+        "outputPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kevin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/PagBoss.Shared.csproj": {
+                "projectPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/PagBoss.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Infra/PagBoss.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Infra/PagBoss.Infra.csproj",
+        "projectName": "PagBoss.Infra",
+        "projectPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Infra/PagBoss.Infra.csproj",
+        "packagesPath": "/home/kevin/.nuget/packages/",
+        "outputPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kevin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/PagBoss.Domain.csproj": {
+                "projectPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Domain/PagBoss.Domain.csproj"
+              },
+              "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/PagBoss.Shared.csproj": {
+                "projectPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/PagBoss.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            },
+            "npgsql": {
+              "target": "Package",
+              "version": "[4.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/PagBoss.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/PagBoss.Shared.csproj",
+        "projectName": "PagBoss.Shared",
+        "projectPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/PagBoss.Shared.csproj",
+        "packagesPath": "/home/kevin/.nuget/packages/",
+        "outputPath": "/home/kevin/Área de Trabalho/PagBoss/PagBoss.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kevin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
