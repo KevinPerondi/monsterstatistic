@@ -44,7 +44,7 @@ namespace PagBoss.MVC.Controllers
                                     out DateTime? LastSee);
 
                 var bossD = new BossData(name,
-                                        (LastSee == null ? DateTime.Now : LastSee.Value), 
+                                        LastSee, 
                                         IntervaloMenor, 
                                         IntervaloMaior, 
                                         IntervaloMedia, 

@@ -7,8 +7,9 @@
         <thead>
             <tr>
                 <th scope="col">Boss</th>
-                <th scope="col">Morto em</th>
+                <th scope="col">Últ. Aparição</th>
                 <th scope="col">Previsão</th>
+                <th scope="col">Qtd. Registros</th>
             </tr>
         </thead>
         <tbody>
@@ -16,8 +17,23 @@
             {
                 <tr>
                     <td>@bossData.BossName</td>
-                    <td>@bossData.LastApparition.ToString("dd/MM/yyyy")</td>
-                    <td>@bossData.FrequencyIntervalDate</td>
+                    @if (bossData.LastApparition != null)
+                    {
+                        <td>@bossData.LastApparition.ToString("dd/MM/yyyy")</td>
+                    }
+                    else
+                    {
+                        <td>Nunca visto.</td>
+                    }
+                    @if (bossData.LastApparition != null && bossData.FrequencyInterval > 0 )
+                    {
+                        <td>@bossData.LastApparition.AddDays(bossData.FrequencyInterval).ToString("dd/MM/yyyy")</td>
+                    }
+                    else
+                    {
+                        <td>Sem previsão.</td>
+                    }
+                    <td>@bossData.RegistersNumber</td>
                 </tr>
             }
         </tbody>

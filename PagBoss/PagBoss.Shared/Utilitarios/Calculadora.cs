@@ -24,7 +24,7 @@ namespace PagBoss.Shared.Utilitarios
                 UltimaAparicao = DatasBoss.Max();
                 QuantidadeRegistros = DatasBoss.Count;
 
-                DateTime[] arrayDatas = DatasBoss.ToArray();
+                DateTime[] arrayDatas = DatasBoss.OrderBy(h => h.Date).ToArray();
                 int loop = arrayDatas.Length-1;
 
                 if(loop > 0)

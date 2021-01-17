@@ -4,7 +4,7 @@ namespace PagBoss.Domain.Entities
 {
     public class BossData
     {
-        public BossData(string bossName, DateTime lastApparition, int minInterval, int maxInterval, decimal avarageInterval, int frequencyInterval, int registersNumber)
+        public BossData(string bossName, DateTime? lastApparition, int minInterval, int maxInterval, decimal avarageInterval, int frequencyInterval, int registersNumber)
         {
             BossName = bossName;
             LastApparition = lastApparition;
@@ -16,7 +16,7 @@ namespace PagBoss.Domain.Entities
         }
 
         public string BossName { get; set; }
-        public DateTime LastApparition { get; set; }
+        public DateTime? LastApparition { get; set; }
         public int MinInterval { get; set; }
         public int MaxInterval { get; set; }
         public decimal AvarageInterval { get; set; }
@@ -26,20 +26,20 @@ namespace PagBoss.Domain.Entities
         {
             get 
             {
-                return LastApparition.AddDays(MinInterval).ToString("dd/MM/yyyy");
+                return LastApparition.Value.AddDays(MinInterval).ToString("dd/MM/yyyy");
             }
         }public string MaxIntervalDate 
         {
             get 
             {
-                return LastApparition.AddDays(MaxInterval).ToString("dd/MM/yyyy");
+                return LastApparition.Value.AddDays(MaxInterval).ToString("dd/MM/yyyy");
             }
         }
         public string FrequencyIntervalDate 
         {
             get 
             {
-                return LastApparition.AddDays(FrequencyInterval).ToString("dd/MM/yyyy");
+                return LastApparition.Value.AddDays(FrequencyInterval).ToString("dd/MM/yyyy");
             }
         }
 
@@ -47,7 +47,7 @@ namespace PagBoss.Domain.Entities
         {
             get 
             {
-                return LastApparition.AddDays((int) Math.Round(AvarageInterval)).ToString("dd/MM/yyyy");
+                return LastApparition.Value.AddDays((int) Math.Round(AvarageInterval)).ToString("dd/MM/yyyy");
             }
         }
     }
