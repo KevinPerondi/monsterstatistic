@@ -8,7 +8,7 @@ using PagBoss.Shared.Utilitarios;
 
 namespace PagBoss.MVC.Controllers
 {
-    [Route("Historico")]
+    [Route("")]
     public class HistoricoController : Controller
     {
         private readonly IHistoricoRepository _repository;
