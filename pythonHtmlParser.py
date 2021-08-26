@@ -17,18 +17,24 @@ def RetornaEncontrados(mobsList, htmlPath):
 	dicionarioDosMortosOntem = []
 	with open(htmlPath,"r") as f:
 		texto = f.read()
-		encontrado = re.search("(<TR BG).*(<\/TR>)",texto)
-		textoFiltrado = encontrado.group(0)
-		textoFiltrado = re.sub("\<.*?\>", "", textoFiltrado)
-		textoFiltrado = textoFiltrado.replace("&#160","")
-		textoFiltrado = textoFiltrado.lower()
-		tudoSplitado = textoFiltrado.split(";")#aqui tem a lista com o nome e os valores
-		for	mob in mobsList:
-			if mob.lower() in tudoSplitado:
-				mobIndex = tudoSplitado.index(mob.lower())
-				if mobIndex > 0 and int(tudoSplitado[mobIndex+2]) > 0:
-					dicionarioDosMortosOntem.append(mob)
+		encontrado = re.search("""(?<=DataRow">).+(?=<tr class=")""",texto)
+		if encontrado is not None:
+			preTexto = encontrado.group(0)
+			preTexto = preTexto.replace("""<tr class="Odd TextRight DataRow">""","")
+			preTexto = preTexto.replace("""<tr class="Even TextRight DataRow">""","")
+			preTexto = preTexto.replace("""</tr>""","")
+			preTexto = preTexto.replace("""</td><td>""",";")
+			preTexto = preTexto.replace("<td>","")
+			preTexto = preTexto.replace("""</td>""","")
+			textoFiltrado = preTexto.lower()
+			tudoSplitado = textoFiltrado.split(";")
+			for	mob in mobsList:
+				if mob.lower() in tudoSplitado:
+					mobIndex = tudoSplitado.index(mob.lower())
+					if mobIndex > 0 and ( (int(tudoSplitado[mobIndex+1])) > 0 or (int(tudoSplitado[mobIndex+2])) > 0 ):
+						dicionarioDosMortosOntem.append(mob)
 	return dicionarioDosMortosOntem
+
 
 def GetDatabaseConnection(configJson):
 	try:
@@ -68,7 +74,6 @@ if __name__ == "__main__":
 	dbConfigs = ReadConfig()
 	mobs = RetornaListaMobs(mobsPath)
 	deramOntem = RetornaEncontrados(mobs,htmlPath)
-	print deramOntem
 	dbConnection = GetDatabaseConnection(dbConfigs)
 	cursorDB = dbConnection.cursor()
 	saveOnDatabase(cursorDB,deramOntem)
